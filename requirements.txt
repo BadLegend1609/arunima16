@@ -13,6 +13,7 @@ django-hitcount==1.3.3
 django-js-asset==1.2.2
 filters==1.3.2
 filters-django==1.0.5
+gunicorn==20.1.0
 Pillow==8.4.0
 psycopg2==2.9.1
 python-dateutil==2.8.2
