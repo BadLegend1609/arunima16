@@ -1,0 +1,89 @@
+<!doctype html>
+{% load static %}
+<!--
+	Template:	 Unika - Responsive One Page HTML5 Template
+	Author:		 imransdesign.com
+	URL:		 http://imransdesign.com/
+    Designed By: https://www.behance.net/poljakova
+	Version:	1.0	
+-->
+<html lang="en-US">
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Hello! Sup?</title>
+		<meta name="description" content="Hello - Let's know each other well">
+		<meta name="keywords" content="Portfolio, Arunima, Instagram, Website, Marketing, Digital" />
+		<meta name="author" content="imransdesign.com">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Google Fonts  -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'> <!-- Body font -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'> <!-- Navbar font -->
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+		<!-- Libs and Plugins CSS -->
+		<link rel="stylesheet" href="{% static 'inc/bootstrap/css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'inc/animations/css/animate.min.css' %}">
+		<link rel="stylesheet" href="{% static 'inc/font-awesome/css/font-awesome.min.css' %}"> <!-- Font Icons -->
+		<link rel="stylesheet" href="{% static 'inc/owl-carousel/css/owl.carousel.css' %}">
+		<link rel="stylesheet" href="{% static 'inc/owl-carousel/css/owl.theme.css' %}">
+
+		<!-- Theme CSS -->
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<link rel="stylesheet" href="{% static 'css/mobile.css' %}">
+
+		<!-- Skin CSS -->
+		<!-- <link rel="stylesheet" href="{% static 'css/skin/cool-gray.css' %}"> -->
+        <!-- <link rel="stylesheet" href="{% static 'css/skin/ice-blue.css' %}"> -->
+		<!-- <link rel="stylesheet" href="{% static 'css/skin/fresh-lime.css' %}"> -->
+        <!-- <link rel="stylesheet" href="css/skin/summer-orange.css"> -->
+        <link rel="stylesheet" href="{% static 'css/skin/night-purple.css' %}">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+    <body data-spy="scroll" data-target="#main-navbar">
+        <div class="page-loader"></div>  <!-- Display loading image while page loads -->
+    	<div class="body">
+			{% include 'base/navbar.html' %}
+			<div class="container" style="top:10%; position: relative;">
+					{% block content %}
+					<!-- Content Goes Here! -->
+					{% endblock content %}
+			</div>
+            <a href="#" class="scrolltotop"><i class="fa fa-arrow-up"></i></a> <!-- Scroll to top button -->            
+        </div><!-- body ends -->
+        
+        <!-- Plugins JS -->
+		<script src="{% static 'inc/jquery/jquery-1.11.1.min.js' %}"></script>
+		<script src="{% static 'inc/bootstrap/js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'inc/owl-carousel/js/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'inc/stellar/js/jquery.stellar.min.js' %}"></script>
+		<script src="{% static 'inc/animations/js/wow.min.js' %}"></script>
+        <script src="{% static 'inc/waypoints.min.js' %}"></script>
+		<script src="{% static 'inc/isotope.pkgd.min.js' %}"></script>
+		<script src="{% static 'inc/classie.js' %}"></script>
+		<script src="{% static 'inc/jquery.easing.min.js' %}"></script>
+		<script src="{% static 'inc/jquery.counterup.min.js' %}"></script>
+		<script src="{% static 'inc/smoothscroll.js' %}"></script>
+
+		<!-- Theme JS -->
+		<script src="{% static 'js/theme.js' %}"></script>
+
+    </body> 
+        
+            
+</html>

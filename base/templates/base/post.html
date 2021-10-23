@@ -1,0 +1,27 @@
+{% extends 'base/main.html' %}
+{% block content %}
+<div class="page-header-wrapper">
+    <div class="container">
+        <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+            <h2>{{post.title | title}}</h2>
+            <div class="devider"></div>
+            <p class="subtitle">{{post.subtitle | title}}</p>
+            <hr>
+            <ul class="post-meta list-inline">
+                <li class="list-inline-item">
+                    <i class="fa fa-calendar-o"></i> <span>{{post.date | date}}</span>
+                </li>
+            </ul>
+            <br>
+            <ul>
+                <li class="list-inline-item">
+                    {% for tag in post.tag.all %}
+                    <i class="fa fa-tags"></i> <a href="#">{{tag.name}}</a>
+                    {% endfor %}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<p>{{post.content | safe}}</p>
+{% endblock content %}
