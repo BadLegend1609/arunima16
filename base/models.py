@@ -57,10 +57,10 @@ class Me(models.Model):
     page_sub_header_3 = models.CharField(max_length=200, null=True, blank=True, default="Sub Header 3")
 
     ## About Section
-    who_am_i = RichTextUploadingField(max_length=5000, null=True, blank=True, default="Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.")
-    what_i_do = RichTextUploadingField(max_length=5000, null=True, blank=True, default="Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.")
-    why_i_do_it = RichTextUploadingField(max_length=5000, null=True, blank=True, default="Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.")
-    since_when = RichTextUploadingField(max_length=5000, null=True, blank=True, default="Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.")
+    who_am_i = models.TextField(max_length=5000, null=True, blank=True, default="Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.")
+    what_i_do = models.TextField(max_length=5000, null=True, blank=True, default="Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.")
+    why_i_do_it = models.TextField(max_length=5000, null=True, blank=True, default="Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.")
+    since_when = models.TextField(max_length=5000, null=True, blank=True, default="Lorem ipsum dolor sit amet set, consectetur utes anet adipisicing elit, sed do eiusmod tempor incidist.")
 
     ## Some Fun Facts Section
     hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk', related_query_name='hit_count_generic_relation')
