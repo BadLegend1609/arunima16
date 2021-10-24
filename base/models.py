@@ -20,13 +20,13 @@ class Tag(models.Model):
         return self.name
 
 class Post(models.Model):
-    thumbnail = models.ImageField(null=True, blank=True, upload_to='images', default='default.jpg')
+    thumbnail = models.ImageField(null=True, blank=True, upload_to='images', default='/static/images/default.jpg')
     title = models.CharField(max_length = 50, blank=True)
     subtitle = models.CharField(max_length = 50, blank=True)
     content = RichTextUploadingField(max_length = 20000000000, blank=True)
     private = models.BooleanField(default=False)
     slug = models.SlugField(max_length=400, unique=True, blank=True)
-    tag = models.ManyToManyField(Tag, null=True)
+    tag = models.ManyToManyField(Tag)
     date = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
