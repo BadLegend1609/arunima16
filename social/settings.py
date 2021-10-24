@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django_filters',
     'hitcount',
     'gunicorn',
-    'django_heroku',
     
     'django.contrib.admin',
     'django.contrib.auth',
@@ -85,6 +84,12 @@ TEMPLATES = [
         },
     },
 ]
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR,  'templates'),
+    os.path.join(BASE_DIR,  'base/templates'),
+    # Add to this list all the locations containing your static files 
+)
 
 WSGI_APPLICATION = 'social.wsgi.application'
 
@@ -148,7 +153,7 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
@@ -161,6 +166,8 @@ CKEDITOR_CONFIGS = {
         'width': '100%'
     }
 }
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
